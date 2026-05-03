@@ -168,7 +168,9 @@ body::after {
 .store-header {
     text-align: center;
     margin-bottom: 25px;
+    width: 100%;
 }
+
 /* ========== مساحة الشعار - دائرة كاملة ========== */
 .logo-space {
     width: 120px;
@@ -216,8 +218,8 @@ body::after {
 .logo-space img {
     width: 100%;
     height: 100%;
-    object-fit: contain; /* يحافظ على النسب */
-    border-radius: 50%; /* يجعل الصورة دائرية أيضاً */
+    object-fit: contain;
+    border-radius: 50%;
     transition: transform 0.3s ease;
 }
 
@@ -231,6 +233,7 @@ body::after {
     color: var(--primary-blue);
     text-shadow: 0 2px 8px rgba(230,50,50,0.3);
 }
+
 .store-name {
     font-size: 2.2rem;
     font-weight: 900;
@@ -242,6 +245,8 @@ body::after {
     line-height: 1.2;
     text-shadow: 0 4px 15px rgba(230,50,50,0.3);
     margin-bottom: 10px;
+    text-align: center;
+    display: block;
 }
 
 .store-sub {
@@ -514,29 +519,6 @@ body::after {
     }
 }
 
-/* ========== تحسينات الجوال ========== */
-@media (max-width: 520px) {
-    .card { 
-        padding: 25px 18px 30px; 
-        border-radius: 45px;
-    }
-    .store-name { font-size: 1.8rem; }
-    .logo-space { width: 90px; height: 90px; }
-    .logo-space i { font-size: 48px; }
-    .buttons-grid { gap: 12px; }
-    .social-btn { padding: 18px 8px; }
-    .social-btn h3 { font-size: 1.1rem; }
-    .social-btn i { font-size: 2.5rem; }
-    .credit-text { font-size: 0.85rem; }
-    .credit-name { font-size: 1rem; }
-    .welcome-title { font-size: 1rem; }
-}
-
-@media (min-width: 521px) {
-    .buttons-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
 /* ========== قسم اختيار الشبكة - سطر واحد في الوسط ========== */
 .network-section {
     background: rgba(10, 25, 48, 0.5);
@@ -556,12 +538,12 @@ body::after {
 
 .network-options {
     display: flex;
-    flex-direction: row;  /* اتجاه أفقي */
-    justify-content: center;  /* توسيط في المنتصف */
+    flex-direction: row;
+    justify-content: center;
     align-items: center;
     gap: 15px;
     width: 100%;
-    flex-wrap: nowrap;  /* منع النزول لأسفل - هذا هو الحل! */
+    flex-wrap: nowrap;
 }
 
 .network-radio {
@@ -575,7 +557,7 @@ body::after {
     background: rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease;
     color: white;
-    white-space: nowrap;  /* منع التفاف النص داخل الزر */
+    white-space: nowrap;
 }
 
 .network-radio:hover {
@@ -600,10 +582,125 @@ body::after {
     font-weight: 600;
 }
 
+/* ========== تحسينات الجوال ========== */
+@media (max-width: 520px) {
+    .card { 
+        padding: 20px 15px 25px; 
+        border-radius: 40px;
+    }
+    .store-name { font-size: 1.5rem; }
+    .logo-space { width: 75px; height: 75px; }
+    .logo-space i { font-size: 38px; }
+    
+    /* تحسين شبكة الأزرار */
+    .buttons-grid { 
+        gap: 10px;
+        margin: 15px 0 10px;
+    }
+    
+    .social-btn { 
+        padding: 12px 5px;
+        border-radius: 30px;
+    }
+    .social-btn h3 { 
+        font-size: 0.95rem;
+        margin-bottom: 3px;
+    }
+    .social-btn p { 
+        font-size: 0.65rem;
+    }
+    .social-btn i { 
+        font-size: 1.8rem;
+        margin-bottom: 6px;
+    }
+    
+    /* تحسين قسم الترحيب */
+    .welcome-section {
+        padding: 12px 12px;
+        margin: 10px 0 15px;
+    }
+    .welcome-title {
+        font-size: 0.9rem;
+        gap: 8px;
+    }
+    .welcome-title i {
+        font-size: 1.2rem;
+    }
+    .welcome-text {
+        font-size: 0.8rem;
+        padding: 8px 10px;
+    }
+    .welcome-text i {
+        margin: 0 4px;
+    }
+    
+    /* تحسين التوقيع */
+    .credit-text { font-size: 0.75rem; }
+    .credit-name { font-size: 0.85rem; }
+    .credit-icon {
+        width: 28px;
+        height: 28px;
+    }
+    .credit-icon i {
+        font-size: 0.9rem;
+    }
+    .credit-content {
+        padding: 8px 15px;
+        gap: 8px;
+    }
+    
+    /* تحسين التذييل */
+    .footer-note {
+        font-size: 0.7rem;
+        gap: 6px;
+        margin-top: 15px;
+    }
+    
+    /* تحسين قسم اختيار الشبكة */
+    .network-section {
+        padding: 5px 8px;
+        margin: 10px 0;
+    }
+    .network-options {
+        gap: 8px;
+    }
+    .network-radio {
+        padding: 4px 6px;
+    }
+    .network-radio span {
+        font-size: 0.7rem;
+    }
+    .network-radio i {
+        font-size: 0.7rem;
+    }
+    .network-radio input {
+        width: 12px;
+        height: 12px;
+    }
+}
+
+@media (max-width: 380px) {
+    .social-btn h3 {
+        font-size: 0.85rem;
+    }
+    .social-btn i {
+        font-size: 1.5rem;
+    }
+    .store-name {
+        font-size: 1.3rem;
+    }
+}
+
+@media (min-width: 521px) {
+    .buttons-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 /* للشاشات الصغيرة جداً - لو ضاقت جداً تخليها تنزل */
 @media (max-width: 380px) {
     .network-options {
-        flex-wrap: wrap;  /* يسمح بالنزول فقط للشاشات الصغيرة جداً */
+        flex-wrap: wrap;
         gap: 8px;
     }
 }
