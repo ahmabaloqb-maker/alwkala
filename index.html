@@ -6,9 +6,7 @@
     <meta name="description" content="مجموعة الوكالة للهواتف الذكية - تواصل معنا عبر واتساب، إنستغرام، تيك توك، فيسبوك أو اتصال مباشر">
     <meta name="theme-color" content="#0B1E38">
     <title>مجموعة الوكالة | للهواتف الذكية</title>
-    
-    <!-- Font Awesome 6 -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
     
     <!-- ملف التنسيقات الرئيسي -->
     <link rel="stylesheet" href="css/style.css">
@@ -25,7 +23,7 @@
             <h1 class="store-name"> مجموعة الوكالة للهواتف الذكية </h1>
             <div class="store-sub">
                 <i class="fas fa-circle" aria-hidden="true"></i> 
-               صـــيانة - بـــرمجة
+             جــوالات  - إكسسوارات -  صـــيانة - بـــرمجة 
                 <i class="fas fa-circle" aria-hidden="true"></i>
             </div>
         </header>
@@ -47,7 +45,7 @@
         <!-- أزرار التواصل الاجتماعي والاتصال -->
         <nav class="buttons-grid">
             <!-- واتساب -->
-            <a href="https://wa.me/967785066766?text=السلام عليكم، أريد الاستفسار عن الأجهزة" 
+            <a href="https://wa.me/967785066766?text=السلام عليكم، أريد الاستفسار عن " 
                class="social-btn whatsapp" 
                target="_blank" 
                rel="noopener noreferrer">
@@ -77,7 +75,7 @@
             </a>
 
             <!-- فيسبوك -->
-            <a href="https://www.facebook.com/phone" 
+            <a href="https://www.facebook.com/phone12344" 
                class="social-btn facebook" 
                target="_blank" 
                rel="noopener noreferrer">
@@ -86,13 +84,34 @@
                 <p>آخر العروض</p>
             </a>
 
-            <!-- اتصال مباشر - مميز باللون الأحمر -->
-            <a href="tel:+967785066766" 
-               class="social-btn call-btn">
-                <i class="fas fa-phone-alt" aria-hidden="true"></i>
-                <h3>اتصال مباشر</h3>
-                <p>نتشرف بخدمتك</p>
-            </a>
+ <!-- اختيار الشبكة (بدون عنوان) -->
+<div class="network-section">
+    <div class="network-options">
+        <label class="network-radio">
+            <input type="radio" name="network" value="967" checked>
+            <i class="fas fa-tower-cell"></i>
+            <span>يمن موبايل</span>
+        </label>
+        <label class="network-radio">
+            <input type="radio" name="network" value="967">
+            <i class="fas fa-sim-card"></i>
+            <span>سبأفون</span>
+        </label>
+        <label class="network-radio">
+            <input type="radio" name="network" value="967">
+            <i class="fas fa-wifi"></i>
+            <span>YOU يو</span>
+        </label>
+    </div>
+</div>
+<!-- زر الاتصال المباشر -->
+<a href="tel:+967785066766" 
+   class="social-btn call-btn" 
+   id="callButton">
+    <i class="fas fa-phone-alt" aria-hidden="true"></i>
+    <h3>اتصال مباشر</h3>
+    <p>نتشرف بخدمتك</p>
+</a> 
         </nav>
 
         <!-- توقيع المصمم -->
@@ -102,7 +121,7 @@
                     <i class="fas fa-code" aria-hidden="true"></i>
                 </div>
                 <span class="credit-text">تصميم وتطوير</span>
-                <span class="credit-name">م/ أحمد العقاب</span>
+                <span class="credit-name">م/ أحمد بن احمد </span>
                 <div class="credit-icon">
                     <i class="fas fa-laptop-code" aria-hidden="true"></i>
                 </div>
@@ -115,19 +134,6 @@
             <span>مجموعة الوكالة - ثقة وأمان وجودة</span> 
             <i class="fas fa-shield-alt" aria-hidden="true"></i>
         </div>
-
-        <!-- عداد الزوار -->
-<div class="visitor-counter-section">
-    <div class="visitor-box">
-        <div class="visitor-item">
-            <i class="fas fa-users"></i>
-            <div class="visitor-info">
-                <span class="visitor-number" id="total-count">0</span>
-                <span class="visitor-label">زائر</span>
-            </div>
-        </div>
-    </div>
-</div>
     </main>
 
     <!-- ملف الجافا سكريبت الرئيسي -->

@@ -190,13 +190,41 @@
     
 
 })();
-// ========== عداد الزوار - عدد الدخول فقط ==========
+
+// ========== تغيير رقم الاتصال حسب الشبكة المختارة ==========
 (function() {
-    let visitCount = parseInt(localStorage.getItem('alwkala_visit_count')) || 0;
+    // ⬇️ ⬇️ ⬇️ ضع أرقامك هنا ⬇️ ⬇️ ⬇️
+    const numbers = {
+        "يمن موبايل": "967785066766",  // استبدل XXXXXXXXX برقم يمن موبايل
+        "سبأفون": "967711056421",      // استبدل XXXXXXXXX برقم سبأفون
+        "YOU": "967730295593"          // استبدل XXXXXXXXX برقم YOU
+    };
+    // ⬆️ ⬆️ ⬆️ ⬆️ ⬆️ ⬆️ ⬆️ ⬆️ ⬆️ ⬆️ ⬆️ ⬆️
     
-    visitCount += 1;
+    const callButton = document.getElementById('callButton');
     
-    localStorage.setItem('alwkala_visit_count', visitCount);
+    function updatePhoneNumber() {
+        let selectedRadio = document.querySelector('input[name="network"]:checked');
+        if (selectedRadio) {
+            // الحصول على اسم الشبكة من العنصر المجاور
+            let networkName = selectedRadio.parentElement.querySelector('span')?.innerText;
+            
+            // البحث عن الرقم حسب اسم الشبكة
+            let phoneNumber = numbers[networkName];
+            
+            if (phoneNumber) {
+                callButton.href = `tel:+${phoneNumber}`;
+                console.log(`📱 تم تغيير رقم الاتصال إلى: +${phoneNumber} (${networkName})`);
+            }
+        }
+    }
     
-    document.getElementById('total-count').textContent = visitCount;
+    // عند تغيير الراديو
+    const networkRadios = document.querySelectorAll('input[name="network"]');
+    networkRadios.forEach(radio => {
+        radio.addEventListener('change', updatePhoneNumber);
+    });
+    
+    // تشغيل الدالة عند تحميل الصفحة
+    updatePhoneNumber();
 })();
