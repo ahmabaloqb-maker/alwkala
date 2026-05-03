@@ -16,40 +16,38 @@
         <!-- رأس الصفحة مع مكان الشعار -->
         <header class="store-header">
             <div class="logo-space">
-                <!-- استبدل الأيقونة بصورة الشعار -->
-                 <img src="images/logo.png" alt="شعار مجموعة الوكالة"> 
-                <i class="fas fa-mobile-screen" aria-label="شعار مجموعة الوكالة"></i>
+                <img src="images/logo.png" alt="شعار مجموعة الوكالة"> 
             </div>
             <h1 class="store-name"> مجموعة الوكالة للهواتف الذكية </h1>
             <div class="store-sub">
-                <i class="fas fa-circle" aria-hidden="true"></i> 
-             جــوالات  - إكسسوارات -  صـــيانة - بـــرمجة 
-                <i class="fas fa-circle" aria-hidden="true"></i>
+                <i class="las la-circle"></i> 
+                جــوالات - إكسسوارات - صـــيانة - بـــرمجة 
+                <i class="las la-circle"></i>
             </div>
         </header>
 
         <!-- قسم الترحيب -->
         <section class="welcome-section">
             <div class="welcome-title">
-                <i class="fas fa-hand-peace" aria-hidden="true"></i> 
+                <i class="las la-hand-peace"></i> 
                 <span>أهلاً وسهلاً بك</span> 
-                <i class="fas fa-qrcode" aria-hidden="true"></i>
+                <i class="las la-qrcode"></i>
             </div>
             <div class="welcome-text">
-                <i class="fas fa-crown" aria-hidden="true"></i> 
+                <i class="las la-crown"></i> 
                 اختر وسيلة التواصل التي تناسبك 
-                <i class="fas fa-crown" aria-hidden="true"></i>
+                <i class="las la-crown"></i>
             </div>
         </section>
 
-        <!-- أزرار التواصل الاجتماعي والاتصال -->
-        <nav class="buttons-grid">
+        <!-- أزرار التواصل الاجتماعي -->
+        <div class="buttons-grid">
             <!-- واتساب -->
-            <a href="https://wa.me/967785066766?text=السلام عليكم، أريد الاستفسار عن " 
+            <a href="https://wa.me/967785066766?text=السلام عليكم، أريد الاستفسار عن" 
                class="social-btn whatsapp" 
                target="_blank" 
                rel="noopener noreferrer">
-                <i class="fab fa-whatsapp" aria-hidden="true"></i>
+                <i class="lab la-whatsapp"></i>
                 <h3>واتساب</h3>
                 <p>خدمة العملاء</p>
             </a>
@@ -59,7 +57,7 @@
                class="social-btn instagram" 
                target="_blank" 
                rel="noopener noreferrer">
-                <i class="fab fa-instagram" aria-hidden="true"></i>
+                <i class="lab la-instagram"></i>
                 <h3>إنستغرام</h3>
                 <p>@phone_awk</p>
             </a>
@@ -69,9 +67,9 @@
                class="social-btn tiktok" 
                target="_blank" 
                rel="noopener noreferrer">
-                <i class="fab fa-tiktok" aria-hidden="true"></i>
+                <i class="lab la-tiktok"></i>
                 <h3>تيك توك</h3>
-                <p>@phone_awk </p>
+                <p>@phone_awk</p>
             </a>
 
             <!-- فيسبوك -->
@@ -79,60 +77,61 @@
                class="social-btn facebook" 
                target="_blank" 
                rel="noopener noreferrer">
-                <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                <i class="lab la-facebook-f"></i>
                 <h3>فيسبوك</h3>
                 <p>آخر العروض</p>
             </a>
+        </div>
 
- <!-- اختيار الشبكة (بدون عنوان) -->
-<div class="network-section">
-    <div class="network-options">
-        <label class="network-radio">
-            <input type="radio" name="network" value="967" checked>
-            <i class="fas fa-tower-cell"></i>
-            <span>يمن موبايل</span>
-        </label>
-        <label class="network-radio">
-            <input type="radio" name="network" value="967">
-            <i class="fas fa-sim-card"></i>
-            <span>سبأفون</span>
-        </label>
-        <label class="network-radio">
-            <input type="radio" name="network" value="967">
-            <i class="fas fa-wifi"></i>
-            <span>YOU</span>
-        </label>
-    </div>
-</div>
-<!-- زر الاتصال المباشر -->
-<a href="tel:+967785066766" 
-   class="social-btn call-btn" 
-   id="callButton">
-    <i class="fas fa-phone-alt" aria-hidden="true"></i>
-    <h3>اتصال مباشر</h3>
-    <p>نتشرف بخدمتك</p>
-</a> 
-        </nav>
+        <!-- اختيار الشبكة -->
+        <div class="network-section">
+            <div class="network-options">
+                <label class="network-radio">
+                    <input type="radio" name="network" value="967" checked>
+                    <i class="las la-tower-cell"></i>
+                    <span>يمن موبايل</span>
+                </label>
+                <label class="network-radio">
+                    <input type="radio" name="network" value="967">
+                    <i class="las la-sim-card"></i>
+                    <span>سبأفون</span>
+                </label>
+                <label class="network-radio">
+                    <input type="radio" name="network" value="967">
+                    <i class="las la-wifi"></i>
+                    <span>YOU</span>
+                </label>
+            </div>
+        </div>
+
+        <!-- زر الاتصال المباشر -->
+        <a href="tel:+967785066766" 
+           class="social-btn call-btn" 
+           id="callButton">
+            <i class="las la-phone-alt"></i>
+            <h3>اتصال مباشر</h3>
+            <p>نتشرف بخدمتك</p>
+        </a>
 
         <!-- توقيع المصمم -->
         <footer class="developer-credit">
             <div class="credit-content">
                 <div class="credit-icon">
-                    <i class="fas fa-code" aria-hidden="true"></i>
+                    <i class="las la-code"></i>
                 </div>
                 <span class="credit-text">تصميم وتطوير</span>
-                <span class="credit-name">م/ أحمد بن احمد </span>
+                <span class="credit-name">م/ أحمد بن احمد</span>
                 <div class="credit-icon">
-                    <i class="fas fa-laptop-code" aria-hidden="true"></i>
+                    <i class="las la-laptop-code"></i>
                 </div>
             </div>
         </footer>
 
         <!-- تذييل -->
         <div class="footer-note">
-            <i class="fas fa-heart" aria-hidden="true"></i> 
+            <i class="las la-heart"></i> 
             <span>مجموعة الوكالة - ثقة وأمان وجودة</span> 
-            <i class="fas fa-shield-alt" aria-hidden="true"></i>
+            <i class="las la-shield-alt"></i>
         </div>
     </main>
 
